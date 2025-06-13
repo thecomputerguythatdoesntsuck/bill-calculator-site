@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Roommate's and Austin's Share</title>
+  <title>Austin's Bill Calculator</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex-grow: 1;
     }
     input {
       padding: 10px;
@@ -37,6 +43,14 @@
       white-space: pre-line;
       max-width: 300px;
     }
+    footer {
+      margin-top: auto;
+      text-align: center;
+      color: #666;
+      font-size: 0.9em;
+      padding: 15px 0;
+      border-top: 1px solid #ddd;
+    }
     @media (max-width: 480px) {
       body {
         margin: 20px 10px;
@@ -50,15 +64,21 @@
 </head>
 <body>
 
-  <h2>Enter City of Longmont bill</h2>
-  <input type="number" id="inputX" placeholder="Enter City of Longmont bill" />
+  <main>
+    <h2>Austin's Bill Calculator</h2>
+    <input type="number" id="inputX" placeholder="Enter City of Longmont bill" />
 
-  <div>
-    <label><input type="radio" name="divideBy" value="3" checked /> Divide by 3</label>
-    <label><input type="radio" name="divideBy" value="4" /> Divide by 4</label>
-  </div>
+    <div>
+      <label><input type="radio" name="divideBy" value="3" checked /> Divide by 3</label>
+      <label><input type="radio" name="divideBy" value="4" /> Divide by 4</label>
+    </div>
 
-  <div id="result" class="result"></div>
+    <div id="result" class="result"></div>
+  </main>
+
+  <footer>
+    Built with ❤️ by ChatGPT — you just watched! 😄
+  </footer>
 
   <script>
     const inputX = document.getElementById('inputX');
